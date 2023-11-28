@@ -1,19 +1,31 @@
 <!DOCTYPE html>
-
+<html lang="id">
 <head>
-    <title>Pemrosesan Gambar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Pemrosesan Gambar{% endblock %}</title>
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <div class="navbar p-4">
-        <a class="btn btn-ghost normal-case text-xl" href="{{ url_for('index') }}">
-            <img src="{{ url_for('static', filename='images/LOGO.png') }}" alt="Logo" class="logo">
-            <span class="group-name">KELOMPOK 11</span>
-        </a>
-    </div>
+    <nav>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/LOGO.png') }}" alt="logo" class="logo-img">
+            <h4>Kelompok 11</h4>
+        </div>
+      
+        <ul>
+            <li><a href="{{ url_for('index') }}">Beranda</a></li>
+            <li><a href="{{ url_for('blur_image') }}">Blur Gambar</a></li>
+            <li><a href="{{ url_for('black_and_white_image') }}">Hitam-Putih</a></li>
+            <li><a href="{{ url_for('index') }}">Enhanced gambar</a></li>
+        </ul>
+    </nav>
 
-    <div class="container mx-auto p-4">
+    <div class="content">
         {% block content %}{% endblock %}
     </div>
 </body>
