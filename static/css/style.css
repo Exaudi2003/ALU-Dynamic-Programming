@@ -107,3 +107,130 @@ button {
     margin-top: 10px;
     margin-left: 10px; /* Spasi antara tombol "Upload and Blur" dan "Unduh Gambar" */
 }
+
+.pengumuman {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 97%;
+    height: 200px;
+    border: 2px solid rgba(43, 36, 36, 0.3);
+    margin: 20px auto;
+    color: rgba(2, 89, 189, 0.801); /* Menggunakan warna yang sama dengan background nav */
+}
+
+
+
+.landing {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 97%;
+    height: 200px;
+    border: 2px solid rgba(43, 36, 36, 0.3);
+    margin: 20px auto;
+    color: rgba(2, 89, 189, 0.801); /* Menggunakan warna yang sama dengan background nav */
+}
+
+.landing p {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgba(2, 89, 189, 0.801);
+}
+
+.iklan p {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Agar kolom turun ke baris berikutnya jika tidak cukup ruang */
+    justify-content: space-around;
+    margin: 20px 0; /* Margin untuk memberikan sedikit ruang di atas dan bawah .row */
+}
+
+.col {
+    width: 45%; /* Mengurangi lebar agar ada ruang antar dua kolom */
+    margin-bottom: 20px; /* Memberikan sedikit ruang di bawah setiap kolom */
+}
+
+.blur-img,
+.hitam-img {
+    width: 70%; /* Agar gambar memenuhi lebar .col */
+    max-width: 70%;
+    height: auto; /* Agar gambar tetap proporsional */
+    border-radius: 8px; /* Menambahkan sudut melengkung pada gambar */
+    margin-top: 50px;
+}
+
+.btn-blue {
+    width: 30%;
+    height: 70px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0077C2;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 40px; 
+   margin-left: 100px;
+}
+
+.btn-blue:hover {
+    background-color: #fff;
+    color: #00000048;
+}
+
+
+h1 { 
+    text-align: center;
+}
+
+/* Style for the form container */
+/* Style the form container */
+.image-form {
+    max-width: 800px; /* Sesuaikan dengan kebutuhan */
+    margin: auto; /* Pusatkan form secara horizontal */
+    padding: 30px; /* Tambahkan padding ke form */
+}
+
+/* Style form groups (labels and input fields) */
+.form-group {
+    display: inline-block; /* Mengatur agar form group berada dalam satu baris */
+    margin-right: 20px; /* Menambahkan space antara form group */
+    vertical-align: top; /* Menjaga agar elemen tetap berada di atas */
+}
+
+/* Style the upload button */
+button[type="submit"] {
+    background-color: #4caf50; /* Warna latar hijau */
+    color: white; /* Warna teks putih */
+    padding: 10px 15px; /* Tambahkan padding */
+    border: none; /* Hapus border */
+    cursor: pointer; /* Tambahkan cursor pointer saat dihover */
+    margin-top: 10px; /* Tambahkan space di atas tombol */
+}
+
+/* Style the download button */
+.download-button button {
+    background-color: #3498db; /* Warna latar biru */
+    color: white; /* Warna teks putih */
+    padding: 10px 15px; /* Tambahkan padding */
+    border: none; /* Hapus border */
+    cursor: pointer; /* Tambahkan cursor pointer saat dihover */
+}
+
+/* Tambahkan space antara tombol unduh dan tombol lainnya */
+.download-button button + button {
+    margin-left: 10px;
+}
+
+/* Style the result section */
+.result-section {
+    margin-top: 20px; /* Tambahkan space di atas bagian hasil */
+}

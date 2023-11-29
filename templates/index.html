@@ -1,11 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Selamat datang di {{ page_title }} sederhana </h1>
-    <p>Ini merupakan implementasi dari penggunaan</p>
-    <p>algoritma dynamic programming versi sederhana</p>
-    <p>Jika ingin mencoba pemrosesan gambar yang ada </p>
-    <p> kamu dapat memilihnya terdapat 3 pemrosesan gambar</p>
-    <p>Ada blur image, hitam-putih dan enhanced image</p>
-    <p>silahkan coba fiturnya untuk mendapatkan hasil</p>
+    <div class="landing">
+        <p> Algoritma Dynamic Programming</p>
+    </div>
+    <div class="iklan"> 
+        <p>Pemrosesan Dengan Algoritma Dynamic Programming</p>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <img src="{{ url_for('static', filename='images/blur.jpeg') }}" alt="blur" class="blur-img">
+            <p>Mengubah Gambar anda menjadi blur</p>
+            <a href="{{ url_for('blur_image') }}" class="btn-blue">Masuk</a>
+        </div>
+        <div class="col">
+            <img src="{{ url_for('static', filename='images/hitamputih.jpeg') }}" alt="hitamputih" class="hitam-img">
+            <p>Mengubah Gambar anda menjadi Hitam Putih</p>
+            <a href="{{ url_for('black_and_white_image') }}" class="btn-blue">Masuk</a>
+        </div>
+    </div>
 {% endblock %}
