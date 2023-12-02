@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="titleblur">
     <h1>Pemrosesan Gambar dengan Efek Blur</h1>
-    <fieldset class="image-form">
+</div>
         <form method="POST" action="{{ url_for('blur_image') }}" enctype="multipart/form-data" class="form">
             <div class="form-group">
                 <label for="file">Pilih Gambar:</label>
@@ -38,5 +39,4 @@
         {% endif %}
 
         <p>{{ message }}</p>
-    </fieldset>
 {% endblock %}

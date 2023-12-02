@@ -75,51 +75,6 @@ nav ul li a:hover {
     }
 }
 
-/* Additional Styling for Other Elements */
-.bg-base-200 {
-    background-color: #f3f4f6;
-    padding: 1rem;
-}
-
-.text-2xl {
-    font-size: 1.5rem;
-}
-
-
-.image-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-.form-group {
-    margin-bottom: 10px;
-}
-
-button {
-    margin-top: 10px;
-}
-
-.download-button {
-    display: inline-block;
-    margin-top: 10px;
-    margin-left: 10px; /* Spasi antara tombol "Upload and Blur" dan "Unduh Gambar" */
-}
-
-.pengumuman {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    width: 97%;
-    height: 200px;
-    border: 2px solid rgba(43, 36, 36, 0.3);
-    margin: 20px auto;
-    color: rgba(2, 89, 189, 0.801); /* Menggunakan warna yang sama dengan background nav */
-}
-
-
-
 .landing {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -127,7 +82,7 @@ button {
     height: 200px;
     border: 2px solid rgba(43, 36, 36, 0.3);
     margin: 20px auto;
-    color: rgba(2, 89, 189, 0.801); /* Menggunakan warna yang sama dengan background nav */
+    color: rgba(2, 89, 189, 0.801);
 }
 
 .landing p {
@@ -145,92 +100,147 @@ button {
     font-weight: bold;
 }
 
-
-.row {
+.card-container {
     display: flex;
-    flex-wrap: wrap; /* Agar kolom turun ke baris berikutnya jika tidak cukup ruang */
-    justify-content: space-around;
-    margin: 20px 0; /* Margin untuk memberikan sedikit ruang di atas dan bawah .row */
+    justify-content: space-between;
+    margin: 20px auto;
 }
 
-.col {
-    width: 45%; /* Mengurangi lebar agar ada ruang antar dua kolom */
-    margin-bottom: 20px; /* Memberikan sedikit ruang di bawah setiap kolom */
+.card {
+    /* Atur lebar dan tinggi card */
+    width: 18rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.blur-img,
-.hitam-img {
-    width: 70%; /* Agar gambar memenuhi lebar .col */
-    max-width: 70%;
-    height: auto; /* Agar gambar tetap proporsional */
-    border-radius: 8px; /* Menambahkan sudut melengkung pada gambar */
-    margin-top: 50px;
+.card-img-top {
+    /* Atur properti gambar pada bagian atas card */
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
 }
 
-.btn-blue {
-    width: 30%;
-    height: 70px;
+.card-body {
+    /* Atur properti isi card */
+    padding: 1.25rem;
+}
+
+.card-text {
+    /* Atur properti teks pada card */
+    color: #333; /* Warna teks */
+}
+
+.btn-primary {
+    /* Atur properti tombol primer */
+    color: #fff; /* Warna teks tombol */
+    background-color: #007bff; /* Warna latar tombol */
+    border-color: #007bff; /* Warna border tombol */
+}
+
+/* Gunakan media query untuk memberikan respon terhadap perubahan lebar layar */
+@media (max-width: 576px) {
+    .card {
+        /* Misalnya, pada layar yang lebih kecil, ubah lebar card menjadi penuh */
+        width: 100%;
+    }
+}
+
+.titleblur {
+    width:96%;
+    height: 100px;
+    border: 2px solid rgba(43, 36, 36, 0.3);
+    margin: 30px auto;
+    color: rgba(0, 0, 0, 0.801);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.titlehiput {
+    width:96%;
+    height: 100px;
+    border: 2px solid rgba(43, 36, 36, 0.3);
+    margin: 30px auto;
+    color: rgba(0, 0, 0, 0.801);
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+/* tampilan  */
+
+.form {
+    margin-top: 20px;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center; /* Tengahkan elemen formulir */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
     border: none;
     border-radius: 5px;
-    background-color: #0077C2;
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
     cursor: pointer;
-    margin-top: 40px; 
-   margin-left: 100px;
 }
 
-.btn-blue:hover {
-    background-color: #fff;
-    color: #00000048;
+button:hover {
+    background-color: #45a049;
 }
 
-
-h1 { 
-    text-align: center;
-}
-
-/* Style for the form container */
-/* Style the form container */
-.image-form {
-    max-width: 800px; /* Sesuaikan dengan kebutuhan */
-    margin: auto; /* Pusatkan form secara horizontal */
-    padding: 30px; /* Tambahkan padding ke form */
-}
-
-/* Style form groups (labels and input fields) */
-.form-group {
-    display: inline-block; /* Mengatur agar form group berada dalam satu baris */
-    margin-right: 20px; /* Menambahkan space antara form group */
-    vertical-align: top; /* Menjaga agar elemen tetap berada di atas */
-}
-
-/* Style the upload button */
-button[type="submit"] {
-    background-color: #4caf50; /* Warna latar hijau */
-    color: white; /* Warna teks putih */
-    padding: 10px 15px; /* Tambahkan padding */
-    border: none; /* Hapus border */
-    cursor: pointer; /* Tambahkan cursor pointer saat dihover */
-    margin-top: 10px; /* Tambahkan space di atas tombol */
-}
-
-/* Style the download button */
-.download-button button {
-    background-color: #3498db; /* Warna latar biru */
-    color: white; /* Warna teks putih */
-    padding: 10px 15px; /* Tambahkan padding */
-    border: none; /* Hapus border */
-    cursor: pointer; /* Tambahkan cursor pointer saat dihover */
-}
-
-/* Tambahkan space antara tombol unduh dan tombol lainnya */
-.download-button button + button {
-    margin-left: 10px;
-}
-
-/* Style the result section */
 .result-section {
-    margin-top: 20px; /* Tambahkan space di atas bagian hasil */
+    margin-top: 20px;
+    text-align: center; /* Tengahkan elemen hasil */
+}
+
+.result-section h2 {
+    color: #4CAF50;
+}
+
+.result-section img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px; /* Tambahkan radius sudut pada gambar hasil */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan pada gambar hasil */
+}
+
+.download-button {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Tambahkan styling untuk pesan */
+p {
+    margin-top: 10px;
+    color: #333;
+}
+
+.content {
+    margin: 20px auto; /* Tengahkan elemen konten secara horizontal */
+    text-align: center; /* Tengahkan konten pada halaman efek blur */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Gunakan tinggi 100% dari viewport untuk menengahkan secara vertikal */
 }

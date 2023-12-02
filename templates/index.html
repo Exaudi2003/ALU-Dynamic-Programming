@@ -8,16 +8,37 @@
         <p>Pemrosesan Dengan Algoritma Dynamic Programming</p>
     </div>
 
-    <div class="row">
-        <div class="col">
-            <img src="{{ url_for('static', filename='images/blur.jpeg') }}" alt="blur" class="blur-img">
-            <p>Mengubah Gambar anda menjadi blur</p>
-            <a href="{{ url_for('blur_image') }}" class="btn-blue">Masuk</a>
-        </div>
-        <div class="col">
-            <img src="{{ url_for('static', filename='images/hitamputih.jpeg') }}" alt="hitamputih" class="hitam-img">
-            <p>Mengubah Gambar anda menjadi Hitam Putih</p>
-            <a href="{{ url_for('black_and_white_image') }}" class="btn-blue">Masuk</a>
+    <div class="container">
+        <div class="card-container">
+            <div class="card mb-3">
+                <img src="{{ url_for('static', filename='images/blur.jpeg') }}" alt="blur" class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text">Mengubah Gambar anda menjadi blur</p>
+                    <a href="{{ url_for('blur_image') }}" class="btn btn-primary">
+                        <span class="button-text">Masuk</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <img src="{{ url_for('static', filename='images/hitamputih.jpeg') }}" alt="hitamputih" class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text">Mengubah Gambar  menjadi Hitam Putih</p>
+                    <a href="{{ url_for('black_and_white_image') }}" class="btn btn-primary">
+                        <span class="button-text">Masuk</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <img src="{{ url_for('static', filename='images/seam.jpg') }}" alt="seam" class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text">Mengubah Gambar  menjadi Seam</p>
+                    <a href="{{ url_for('seam_carving') }}" class="btn btn-primary">
+                        <span class="button-text">Masuk</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}
